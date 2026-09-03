@@ -27,9 +27,7 @@ credentials, authorization codes, or tokens.
 
 - **Challenge ID:** `freelance-milestone-room`
 - **Contributor:** Saakshi Singh
-- **Live demo:** Add URL
-- **Final commit:** Add the full 40-character SHA at submission time
-- **Time spent:** Add estimate
+- **Time spent:** 5 hours
 - **License:** MIT
 
 ## Start here
@@ -58,7 +56,7 @@ npm run dev
 ```
 
 Open `http://localhost:8080`. Replace the starter page with your application or
-keep its branded footer and metadata when adapting it to another framework.
+Keep its branded footer and metadata when adapting it to another framework.
 
 ## What works
 
