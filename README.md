@@ -90,4 +90,4 @@ Devika, a freelance web designer, takes on a small fixed-scope project for Aditi
 
 - Repo: https://github.com/saaksh-iii/freelance-milestone-room
 - Challenge: https://github.com/namoidhq/namoid-challenges/blob/main/challenges/freelance-milestone-room.md
-- Demo recording: _add link here_
+- Demo recording:
