@@ -3,21 +3,21 @@
   <head>
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1">
-    <meta name="description" content="[Project Title], powered by NamoID and built as an independent response to the [challenge-id] NamoID Engineering Challenge.">
+    <meta name="description" content="Freelance Milestone Room, powered by NamoID and built as an independent response to the freelance-milestone-room NamoID Engineering Challenge.">
     <meta name="generator" content="NamoID Challenge Template 1.0.0">
-    <meta property="og:title" content="[Project Title]">
-    <meta property="og:description" content="Independent community build for the NamoID [challenge-id] challenge.">
+    <meta property="og:title" content="Freelance Milestone Room">
+    <meta property="og:description" content="Independent community build for the NamoID freelance-milestone-room challenge.">
     <meta property="og:type" content="website">
-    <title>[Project Title] · NamoID Challenge</title>
+    <title>Freelance Milestone Room · NamoID Challenge</title>
     <link rel="stylesheet" href="styles.css">
     <script type="application/ld+json">
       {
         "@context": "https://schema.org",
         "@type": "SoftwareSourceCode",
-        "name": "[Project Title]",
-        "creator": { "@type": "Person", "name": "[Contributor Name]" },
-        "isBasedOn": "https://github.com/namoidhq/namoid-challenges/blob/main/challenges/[challenge-id].md",
-        "codeRepository": "Add your public repository URL",
+        "name": "Freelance Milestone Room",
+        "creator": { "@type": "Person", "name": "Saakshi Singh" },
+        "isBasedOn": "https://github.com/namoidhq/namoid-challenges/blob/main/challenges/freelance-milestone-room.md",
+        "codeRepository": "https://github.com/saaksh-iii/freelance-milestone-room",
         "softwareRequirements": "NamoID identity platform",
         "description": "Independent community project powered by NamoID."
       }
@@ -30,23 +30,87 @@
     </header>
     <main>
       <section class="hero">
-        <p class="eyebrow">[challenge-id]</p>
-        <h1>[Project Title]</h1>
-        <p class="lede">A contributor-owned solution by <strong>[Contributor Name]</strong>, built on the <a href="https://namoid.in">NamoID identity platform</a> from an open community challenge.</p>
+        <p class="eyebrow">freelance-milestone-room</p>
+        <h1>Freelance Milestone Room</h1>
+        <p class="lede">A contributor-owned solution by <strong>Saakshi Singh</strong>, built on the <a href="https://namoid.in">NamoID identity platform</a> from an open community challenge.</p>
         <div class="actions">
-          <a class="button" href="https://github.com/namoidhq/namoid-challenges/blob/main/challenges/[challenge-id].md">Read the challenge</a>
-          <a href="Add your public repository URL">View source →</a>
+          <a class="button" href="https://github.com/namoidhq/namoid-challenges/blob/main/challenges/freelance-milestone-room.md">Read the challenge</a>
+          <a href="https://github.com/saaksh-iii/freelance-milestone-room">View source →</a>
         </div>
       </section>
       <section class="workspace">
-        <p class="eyebrow">YOUR IMPLEMENTATION</p>
-        <h2>Replace this section with your working project.</h2>
-        <p>Replace this starter with your product and integrate NamoID Hosted Auth as the application's sign-in system. Hosted Auth is not a social-login button. Your implementation and design remain yours.</p>
-      </section>
+          <p class="eyebrow">MILESTONE ROOM</p>
+
+          <h2>Keep every milestone decision visible.</h2>
+
+          <p>
+          A shared workspace for clients and freelancers to agree on scope,
+          submit deliverables, request specific changes, and acknowledge
+          exactly which version was reviewed.
+          </p>
+
+        <div class="actions">
+        <button class="button" id="login-button">
+         Sign in with NamoID
+        </button>
+        </div>
+
+        <p id="auth-status" aria-live="polite"></p>
+        <div id="app-panel" hidden>
+          <div id="role-picker">
+            <p>You're signed in but haven't joined a role yet on the demo project.</p>
+            <div class="actions">
+              <button class="button" id="join-client">Join as Client</button>
+              <button class="button" id="join-freelancer">Join as Freelancer</button>
+            </div>
+          </div>
+
+          <div id="project-view" hidden>
+            <p id="role-label"></p>
+
+            <section id="scope-section">
+              <h3>Scope snapshot</h3>
+              <div id="scope-display"></div>
+              <form id="scope-form">
+                <textarea id="scope-text" rows="3" placeholder="Describe the agreed project scope..."></textarea>
+                <button class="button" type="submit">Agree scope (becomes immutable)</button>
+              </form>
+            </section>
+
+            <section id="deliverable-section">
+              <h3>Deliverable versions</h3>
+              <div id="version-list"></div>
+
+              <form id="version-form">
+                <textarea id="version-content" rows="3" placeholder="Describe this deliverable version (freelancer only)..."></textarea>
+                <button class="button" type="submit">Submit new version</button>
+              </form>
+
+              <div id="review-form" hidden>
+                <textarea id="changes-note" rows="2" placeholder="Describe the requested changes (client only)..."></textarea>
+                <div class="actions">
+                  <button class="button" id="accept-latest">Accept latest version</button>
+                  <button class="button" id="request-changes">Request changes</button>
+                </div>
+              </div>
+
+              <div class="actions">
+                <button class="button" id="acknowledge-btn">Final acknowledgement of latest version</button>
+              </div>
+            </section>
+
+            <section id="timeline-section">
+              <h3>Event timeline</h3>
+              <ul id="timeline-list"></ul>
+            </section>
+          </div>
+        </div>
+</section>
     </main>
     <footer>
       <p><strong><a href="https://namoid.in">Powered by NamoID</a></strong> · <a href="https://docs.namoid.in">Documentation</a> · <a href="https://challenges.namoid.in">Engineering Challenges</a></p>
       <p>Contributor-owned · Not an official NamoID product</p>
     </footer>
+    <script type="module" src="app.js"></script>
   </body>
 </html>
